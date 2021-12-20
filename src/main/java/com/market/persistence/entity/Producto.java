@@ -2,6 +2,7 @@ package com.market.persistence.entity;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "productos")
@@ -27,6 +28,17 @@ public class Producto {
     private Integer cantidadStock;
 
     private Boolean estato;
+
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Categoria categoria;
+
+    @OneToMany(mappedBy = "producto")
+    private List<ComprasProducto> comprasProductoList;
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
 
     public Integer getIdProducto() {
         return idProducto;
