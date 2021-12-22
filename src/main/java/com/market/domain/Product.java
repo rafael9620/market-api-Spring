@@ -4,7 +4,7 @@ public class Product {
 
     private int productId;
     private String name;
-    private int categoryID;
+    private int categoryId;
     private double price;
     private int stock;
     private boolean active;
@@ -26,12 +26,12 @@ public class Product {
         this.name = name;
     }
 
-    public int getCategoryID() {
-        return categoryID;
+    public int getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategoryID(int categoryID) {
-        this.categoryID = categoryID;
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public double getPrice() {

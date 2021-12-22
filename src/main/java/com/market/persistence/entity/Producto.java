@@ -27,18 +27,11 @@ public class Producto {
     @Column(name = "cantidad_stock")
     private Integer cantidadStock;
 
-    private Boolean estato;
+    private Boolean estado;
 
     @ManyToOne
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Categoria categoria;
-
-    @OneToMany(mappedBy = "producto")
-    private List<ComprasProducto> comprasProductoList;
-
-    public Categoria getCategoria() {
-        return categoria;
-    }
 
     public Integer getIdProducto() {
         return idProducto;
@@ -88,11 +81,21 @@ public class Producto {
         this.cantidadStock = cantidadStock;
     }
 
-    public Boolean getEstato() {
-        return estato;
+    public Boolean getEstado() {
+        return estado;
     }
 
-    public void setEstato(Boolean estato) {
-        this.estato = estato;
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 }
+
+
