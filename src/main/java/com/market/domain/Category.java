@@ -1,7 +1,6 @@
 package com.market.domain;
 
 public class Category {
-
     private int categoryId;
     private String category;
     private boolean active;
@@ -30,4 +29,3 @@ public class Category {
         this.active = active;
     }
 }
-

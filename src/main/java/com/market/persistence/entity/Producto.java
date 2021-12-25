@@ -1,8 +1,6 @@
 package com.market.persistence.entity;
 
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "productos")
@@ -97,5 +95,3 @@ public class Producto {
         this.categoria = categoria;
     }
 }
-
-
